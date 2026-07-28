@@ -1,0 +1,12 @@
+# Dependencies and local build caches
+node_modules/
+.npm-cache/
+.astro/
+dist/
+
+# Local environment and editor files
+.env
+.env.*
+.DS_Store
+*.log
+.vscode/

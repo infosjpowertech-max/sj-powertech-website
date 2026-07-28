@@ -1,0 +1,4 @@
+---
+const { eyebrow='SJ Powertech', title, text } = Astro.props;
+---
+<section class="grid-pattern bg-navy py-20 text-white md:py-28"><div class="shell max-w-4xl"><p class="eyebrow">{eyebrow}</p><h1 class="font-display text-4xl leading-tight md:text-6xl">{title}</h1>{text && <p class="mt-4 max-w-2xl text-lg text-white/75">{text}</p>}</div></section>

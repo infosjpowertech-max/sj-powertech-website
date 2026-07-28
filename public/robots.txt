@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sjpowertech.com/sitemap-index.xml

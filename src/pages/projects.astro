@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import PageHero from '../components/PageHero.astro'; import ProjectGrid from '../components/ProjectGrid.astro';
+---
+<BaseLayout title="Projects" description="Explore selected SJ Powertech electrical, automation and infrastructure projects."><PageHero title="Projects built to perform." text="A snapshot of the systems, spaces and operations we have helped bring to life."/><section class="shell py-20"><div class="mb-9 flex flex-wrap gap-3"><button class="border border-navy bg-navy px-4 py-2 text-sm text-white">All work</button><button class="border border-slate-300 px-4 py-2 text-sm">Electrical</button><button class="border border-slate-300 px-4 py-2 text-sm">Automation</button><button class="border border-slate-300 px-4 py-2 text-sm">EPC</button></div><ProjectGrid/></section></BaseLayout>

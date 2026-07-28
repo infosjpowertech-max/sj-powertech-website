@@ -1,0 +1,16 @@
+---
+const { currentPath = '/' } = Astro.props;
+const links = [['/','Home'],['/about','About'],['/services','Services'],['/projects','Projects'],['/industries','Industries'],['/careers','Careers'],['/contact','Contact']];
+---
+<header class="sticky top-0 z-50 border-b border-white/10 bg-navy text-white shadow-lg">
+  <div class="shell flex min-h-[72px] items-center justify-between gap-4">
+    <a href="/" class="flex items-center gap-3" aria-label="SJ Powertech home"><span class="grid h-10 w-10 place-items-center border-2 border-gold text-xl font-bold text-gold">SJ</span><span class="leading-tight"><b class="block tracking-wide">SJ POWERTECH</b><small class="text-[10px] tracking-[.18em] text-white/65">PVT. LTD.</small></span></a>
+    <button id="nav-toggle" class="md:hidden" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <nav id="site-nav" class="hidden md:block"><ul class="m-0 flex list-none items-center gap-5 p-0 text-sm font-semibold">{links.map(([url,label]) => <li><a class:list={["hover:text-gold", currentPath === url && "text-gold"]} href={url}>{label}</a></li>)}<li><a class="btn btn-gold !py-2 !text-sm" href="/contact">Request a Quote</a></li></ul></nav>
+  </div>
+  <nav id="mobile-nav" class="hidden border-t border-white/10 px-4 pb-4 md:hidden"><ul class="m-0 list-none p-0">{links.map(([url,label]) => <li><a class="block border-b border-white/10 py-3 hover:text-gold" href={url}>{label}</a></li>)}</ul></nav>
+</header>
+<script>
+  const toggle=document.querySelector('#nav-toggle'); const mobile=document.querySelector('#mobile-nav');
+  toggle?.addEventListener('click',()=>{ const open=mobile?.classList.toggle('hidden')===false; toggle.setAttribute('aria-expanded',String(open)); });
+</script>

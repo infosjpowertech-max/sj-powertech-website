@@ -1,0 +1,9 @@
+---
+const services = [
+ ['01','Electrical Engineering','End-to-end design, supply, installation and commissioning for dependable electrical systems.','/images/service-electrical.png'],
+ ['02','Industrial Automation','Smarter operations through PLC, SCADA, instrumentation and control integration.','/images/service-automation.png'],
+ ['03','EPC & Infrastructure','Disciplined project delivery that brings complex infrastructure from plan to performance.'],
+ ['04','Maintenance & Support','Responsive lifecycle support that protects uptime, safety and asset value.']
+];
+---
+<div class="grid gap-4 md:grid-cols-2">{services.map(([number,title,text,image]) => <article class="reveal group overflow-hidden border border-slate-200 bg-white transition hover:-translate-y-1 hover:border-gold hover:shadow-xl">{image && <img src={image} alt="" class="h-40 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"/>}<div class="p-7"><span class="text-sm font-bold text-gold">{number}</span><h3 class="mt-5 font-display text-2xl text-navy">{title}</h3><p class="mt-3 text-sm text-slate-600">{text}</p><a href="/services" class="mt-5 inline-block text-sm font-bold text-navy group-hover:text-gold">Learn more →</a></div></article>)}</div>
